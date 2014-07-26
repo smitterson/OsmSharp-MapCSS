@@ -300,6 +300,23 @@ area|z14-[highway=rest_area] {
     fill-color: #efc8c8;
 }
 
+area|z10-[leisure=sports_centre],
+area|z10-[leisure=stadium] {
+    fill-color: #33cc99;
+}
+
+area|z10-[leisure=track] {
+    fill-color: #74dcba;
+    color: #888888;
+    width: 0.5;
+}
+
+area|z10-[leisure=pitch] {
+    fill-color: #8ad3af;
+    color: #888888;
+    width: 0.5;
+}
+
 /* ===== Water ==== */
 
 /* Z-Index for all Water */
@@ -456,7 +473,7 @@ way[highway] {
 }
 
 way[highway][bridge][bridge!=no] {
-	z-index: 200000;  // z-index hack for bridges
+	z-index: 2000;  // z-index hack for bridges
 }
 
 way|z12[highway=motorway_link] {
@@ -1506,10 +1523,8 @@ node|z11-14[place=town][captial][capital!=no] {
 	text-halo-color: white;
 }
 
-node|z9-10[place=city][!captial],
-node|z9-10[place=metropolis][!captial],
-node|z9-10[place=city][captial=no],
-node|z9-10[place=metropolis][captial=no] {
+node|z9-10[place=city],
+node|z9-10[place=metropolis] {
     font-family: DejaVu Sans;
     font-size: 11;
     text: name;
@@ -1518,10 +1533,8 @@ node|z9-10[place=metropolis][captial=no] {
 	text-halo-color: white;
 }
 
-node|z11-14[place=city][!captial],
-node|z11-14[place=metropolis][!captial],
-node|z11-14[place=city][captial=no],
-node|z11-14[place=metropolis][captial=no] {
+node|z11-14[place=city],
+node|z11-14[place=metropolis] {
     font-family: DejaVu Sans;
     font-size: 14;
     text: name;
@@ -1530,12 +1543,9 @@ node|z11-14[place=metropolis][captial=no] {
 	text-halo-color: white;
 }
 
-node|z9-10[place=town][!captial],
-node|z9-10[place=large_town][!captial],
-node|z9-10[place=small_town][!captial],
-node|z9-10[place=town][captial=no],
-node|z9-10[place=large_town][captial=no],
-node|z9-10[place=small_town][captial=no] {
+node|z9-10[place=town],
+node|z9-10[place=large_town],
+node|z9-10[place=small_town] {
     font-family: DejaVu Sans;
     font-size: 8;
     text: name;
@@ -1545,12 +1555,9 @@ node|z9-10[place=small_town][captial=no] {
 	text-halo-color: white;
 }
 
-node|z11-13[place=town][!captial],
-node|z11-13[place=large_town][!captial],
-node|z11-13[place=small_town][!captial],
-node|z11-13[place=town][captial=no],
-node|z11-13[place=large_town][captial=no],
-node|z11-13[place=small_town][captial=no] {
+node|z11-13[place=town],
+node|z11-13[place=large_town],
+node|z11-13[place=small_town] {
     font-family: DejaVu Sans;
     font-size: 10;
     text: name;
@@ -1560,12 +1567,9 @@ node|z11-13[place=small_town][captial=no] {
 	text-halo-color: white;
 }
 
-node|z14-[place=town][!captial],
-node|z14-[place=large_town][!captial],
-node|z14-[place=small_town][!captial],
-node|z14-[place=town][captial=no],
-node|z14-[place=large_town][captial=no],
-node|z14-[place=small_town][captial=no] {
+node|z14-[place=town],
+node|z14-[place=large_town],
+node|z14-[place=small_town] {
     font-family: DejaVu Sans;
     font-size: 14;
     text: name;
@@ -2554,12 +2558,12 @@ way|z17-[aeroway][aeroway!=runway][aeroway!=taxiway] {
 
 node|z12-[place=island] {
     font-family: DejaVu Sans;
-	font-weight: bold;
 	font-style: italic;
     font-size: 9;
     text: name;
     text-color: black;
     text-halo-radius: 1;
+	text-halo-color: white;
 }
 
 node|z17-[amenity=pub],
@@ -2678,7 +2682,7 @@ node|z15-[natural=wood] {
     max-width: 10;
 }
 
-node|z13-[natural=peak] {
+node|z14-[natural=peak] {
     font-family: DejaVu Sans;
     font-size: 10;
     text: name;
